@@ -47,7 +47,7 @@ public class LoginController implements Initializable {
     private JFXTextField username;
 
     @FXML
-    void loginAction(ActionEvent event) {
+    void loginAction(ActionEvent event) throws IOException {
         try {
             loginAction();
         } catch (SQLException e) {
@@ -70,7 +70,7 @@ public class LoginController implements Initializable {
         signUp.setResizable(false);
     }
 
-    public void loginAction() throws SQLException {
+    public void loginAction() throws SQLException, IOException {
         progress.setVisible(true);
         connection = handler.getConnection();
         String loginQ = "SELECT * FROM users where username=? and password=?";
@@ -88,7 +88,13 @@ public class LoginController implements Initializable {
             }
 
             if (count == 1) {
-                System.out.println("Username and password is correct");
+                login.getScene().getWindow().hide();
+                Stage signUp = new Stage();
+                Parent root = FXMLLoader.load(getClass().getResource("/FXML/signupSuccess.fxml"));
+                Scene scene = new Scene(root);
+                signUp.setScene(scene);
+                signUp.show();
+                signUp.setResizable(false);
             } else {
                 System.out.println("Username and password is not correct");
             }
