@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LogintoHomeController">
+   <children>
+      <JFXButton fx:id="login" layoutX="196.0" layoutY="308.0" onAction="#Home" prefHeight="26.0" prefWidth="176.0" text="Login now" textFill="#a0a2ab" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="222.0" layoutY="69.0" prefHeight="20.0" prefWidth="37.0" text="Car" textFill="#2196f3">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="260.0" layoutY="69.0" prefHeight="32.0" prefWidth="68.0" text="Rental " textFill="#2196f3">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="328.0" layoutY="69.0" prefHeight="32.0" prefWidth="79.0" text="System" textFill="#2196f3">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <JFXTextArea focusColor="#fbfcff" layoutX="96.0" layoutY="109.0" prefHeight="182.0" prefWidth="437.0" style="-fx-text-inner-color: #fff;" text="Congratulations! Your registration for our car rentals desktop application was successful. You are now ready to explore a world of convenience and freedom in renting cars. To get started, simply navigate to our login page. There, you can enter your registered username and password to access your personalized account. From your account, you will have the ability to browse our extensive fleet, make reservations, manage bookings, and enjoy exclusive benefits. We look forward to providing you with a seamless car rental experience. Happy travels!" unFocusColor="#fffdfd">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </JFXTextArea>
+      <Separator layoutX="98.0" layoutY="103.0" prefHeight="2.0" prefWidth="438.0" />
+      <ImageView fitHeight="50.0" fitWidth="56.0" layoutX="271.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@i.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
