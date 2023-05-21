@@ -12,7 +12,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
 
-public class Finance implements Initializable{
+public class Finance implements Initializable {
 
     @FXML
     private JFXTextField Address;
@@ -51,14 +51,16 @@ public class Finance implements Initializable{
             e.printStackTrace();
         }
     }
+
     private void setNode2(AnchorPane node) {
         Holder.getChildren().clear();
         AnchorPane.setRightAnchor(node, 0.0);
         AnchorPane.setLeftAnchor(node, 0.0);
-        AnchorPane.setTopAnchor(node, 0.0); 
+        AnchorPane.setTopAnchor(node, 0.0);
         AnchorPane.setBottomAnchor(node, 0.0);
         Holder.getChildren().add(node);
     }
+
     @FXML
     void Finance(ActionEvent event) {
 
@@ -66,10 +68,9 @@ public class Finance implements Initializable{
 
     private AnchorPane Holder;
 
-public void setHolder(AnchorPane holder) {
-    Holder = holder;
-}
-
+    public void setHolder(AnchorPane holder) {
+        Holder = holder;
+    }
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {

@@ -91,7 +91,7 @@ public class LoginController implements Initializable {
                 if (count == 1) {
                     login.getScene().getWindow().hide();
                     Stage administratorStage = new Stage();
-                    Parent administratorRoot = FXMLLoader.load(getClass().getResource("/FXML/administrator.fxml"));
+                    Parent administratorRoot = FXMLLoader.load(getClass().getResource("/FXML/car_form.fxml"));
                     Scene administratorScene = new Scene(administratorRoot);
                     administratorStage.setScene(administratorScene);
                     administratorStage.show();
@@ -132,7 +132,7 @@ public class LoginController implements Initializable {
                     Scene scene = new Scene(root);
                     signUp.setScene(scene);
                     signUp.show();
-                    signUp.setResizable(false);
+                    signUp.setResizable(true);
                 } else {
                     System.out.println("Username and password is not correct");
                     progress.setVisible(true);

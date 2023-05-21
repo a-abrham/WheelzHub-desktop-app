@@ -113,6 +113,25 @@ public class HomePageController implements Initializable {
     }
 
     @FXML
+    void Home(ActionEvent event) {
+        Holder.getChildren().clear();
+        holder.getChildren().clear();
+        Holder.getChildren().clear();
+        holder.getChildren().clear();
+        try {
+            AnchorPane homePane = FXMLLoader.load(getClass().getResource("/FXML/home.fxml"));
+            setNode7(homePane);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void setNode7(AnchorPane node) {
+        Holder.getChildren().clear();
+        Holder.getChildren().add(node);
+    }
+
+    @FXML
     void Finances(ActionEvent event) {
         Holder.getChildren().clear();
         holder.getChildren().clear();
