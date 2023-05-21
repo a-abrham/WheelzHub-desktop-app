@@ -21,6 +21,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -64,6 +65,8 @@ public class SignUpController implements Initializable {
   void signup(ActionEvent event) throws IOException {
     signup.getScene().getWindow().hide();
     Stage login = new Stage();
+    Image icon = new Image(getClass().getResourceAsStream("../img/car.png"));
+    login.getIcons().add(icon);
     Parent root = FXMLLoader.load(getClass().getResource("/FXML/login.fxml"));
     Scene scene = new Scene(root);
     login.setScene(scene);
@@ -107,6 +110,8 @@ public class SignUpController implements Initializable {
 
       signup.getScene().getWindow().hide();
       Stage signupStage = new Stage();
+      Image icon = new Image(getClass().getResourceAsStream("../img/car.png"));
+      signupStage.getIcons().add(icon);
       AnchorPane signupRoot = FXMLLoader.load(getClass().getResource("/FXML/signupSuccess.fxml"));
       Scene signupScene = new Scene(signupRoot);
       signupStage.setScene(signupScene);

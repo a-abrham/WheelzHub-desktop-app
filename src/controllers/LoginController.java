@@ -20,6 +20,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import DBconnection.DBhandler;
@@ -91,6 +92,8 @@ public class LoginController implements Initializable {
                 if (count == 1) {
                     login.getScene().getWindow().hide();
                     Stage administratorStage = new Stage();
+                    Image icon = new Image(getClass().getResourceAsStream("../img/car.png"));
+                    administratorStage.getIcons().add(icon);
                     Parent administratorRoot = FXMLLoader.load(getClass().getResource("/FXML/Administrator.fxml"));
                     Scene administratorScene = new Scene(administratorRoot);
                     administratorStage.setScene(administratorScene);
@@ -128,6 +131,8 @@ public class LoginController implements Initializable {
                 if (count == 1) {
                     login.getScene().getWindow().hide();
                     Stage signUp = new Stage();
+                    Image icon = new Image(getClass().getResourceAsStream("../img/car.png"));
+                    signUp.getIcons().add(icon);
                     Parent root = FXMLLoader.load(getClass().getResource("/FXML/homepage.fxml"));
                     Scene scene = new Scene(root);
                     signUp.setScene(scene);

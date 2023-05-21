@@ -12,6 +12,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class sucess implements Initializable {
@@ -23,6 +24,8 @@ public class sucess implements Initializable {
     void Home(ActionEvent event) throws IOException {
         login.getScene().getWindow().hide();
         Stage signUp = new Stage();
+        Image icon = new Image(getClass().getResourceAsStream("../img/car.png"));
+        signUp.getIcons().add(icon);
         Parent root = FXMLLoader.load(getClass().getResource("/FXML/login.fxml"));
         Scene scene = new Scene(root);
         signUp.setScene(scene);
