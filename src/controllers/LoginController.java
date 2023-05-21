@@ -91,7 +91,7 @@ public class LoginController implements Initializable {
                 if (count == 1) {
                     login.getScene().getWindow().hide();
                     Stage administratorStage = new Stage();
-                    Parent administratorRoot = FXMLLoader.load(getClass().getResource("/FXML/car_form.fxml"));
+                    Parent administratorRoot = FXMLLoader.load(getClass().getResource("/FXML/Administrator.fxml"));
                     Scene administratorScene = new Scene(administratorRoot);
                     administratorStage.setScene(administratorScene);
                     administratorStage.show();
