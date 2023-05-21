@@ -13,61 +13,55 @@
 
 <AnchorPane fx:id="parentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="600.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SignUpController">
    <children>
-      <JFXTextField id="username1" fx:id="name" layoutX="164.0" layoutY="125.0" prefHeight="26.0" prefWidth="234.0" promptText="Enter your Username" unFocusColor="#a0a2ab">
+      <JFXTextField id="username1" fx:id="name" layoutX="168.0" layoutY="123.0" prefHeight="26.0" prefWidth="234.0" promptText="Enter your Username" unFocusColor="#a0a2ab">
          <font>
             <Font size="14.0" />
          </font>
       </JFXTextField>
-      <JFXRadioButton id="gender" fx:id="male" layoutX="164.0" layoutY="227.0" selected="true" text="Male" textFill="#a0a2ab">
+      <JFXRadioButton id="gender" fx:id="male" layoutX="164.0" layoutY="218.0" selected="true" text="Male" textFill="#a0a2ab">
          <toggleGroup>
             <ToggleGroup fx:id="Gender" />
          </toggleGroup>
       </JFXRadioButton>
-      <JFXRadioButton id="gender" fx:id="female" layoutX="278.0" layoutY="227.0" text="Female" textFill="#a0a2ab" toggleGroup="$Gender" />
-      <JFXTextField fx:id="location" layoutX="168.0" layoutY="261.0" prefHeight="26.0" prefWidth="234.0" promptText="Enter Your Location" unFocusColor="#a0a2ab" />
-      <JFXButton id="signupto" fx:id="Signupto" layoutX="198.0" layoutY="311.0" onAction="#Database" prefHeight="26.0" prefWidth="175.0" style="-fx-background-color: #2196f3;" text="SignUp" textFill="#c7c2c2">
+      <JFXRadioButton id="gender" fx:id="female" layoutX="285.0" layoutY="218.0" text="Female" textFill="#a0a2ab" toggleGroup="$Gender" />
+      <JFXTextField fx:id="location" layoutX="168.0" layoutY="251.0" prefHeight="26.0" prefWidth="234.0" promptText="Enter Your Location" unFocusColor="#a0a2ab" />
+      <JFXButton id="signupto" fx:id="Signupto" layoutX="198.0" layoutY="301.0" onAction="#Database" prefHeight="26.0" prefWidth="175.0" style="-fx-background-color: #2196f3;" text="SignUp" textFill="#c7c2c2">
          <font>
             <Font size="14.0" />
          </font>
       </JFXButton>
-      <ImageView fitHeight="31.0" fitWidth="28.0" layoutX="113.0" layoutY="133.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="18.0" fitWidth="19.0" layoutX="135.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@user.PNG" />
          </image></ImageView>
-      <ImageView fitHeight="37.0" fitWidth="35.0" layoutX="109.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="29.0" fitWidth="35.0" layoutX="130.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="26.0" fitWidth="19.0" layoutX="134.0" layoutY="254.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@location.PNG" />
          </image></ImageView>
-      <ImageView fitHeight="30.0" fitWidth="28.0" layoutX="120.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="18.0" fitWidth="28.0" layoutX="134.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@pass.PNG" />
          </image></ImageView>
-      <JFXButton id="signup" fx:id="signup" layoutX="462.0" layoutY="21.0" onAction="#signup" prefHeight="30.0" prefWidth="62.0" style="-fx-background-color: #2D3347; -fx-border-color: #a2a0ab;" text="Login" textFill="#efefef">
+      <JFXButton id="signup" fx:id="signup" layoutX="494.0" layoutY="36.0" onAction="#signup" prefHeight="30.0" prefWidth="62.0" style="-fx-background-color: #2D3347; -fx-border-color: #a2a0ab;" text="Login" textFill="#efefef">
          <font>
             <Font size="14.0" />
          </font>
       </JFXButton>
-      <Label layoutX="184.0" layoutY="81.0" prefHeight="18.0" prefWidth="28.0" text="Car" textFill="#2196f3">
+      <Label layoutX="227.0" layoutY="75.0" prefHeight="32.0" prefWidth="117.0" text="WheelzHub" textFill="#2196f3">
          <font>
-            <Font size="16.0" />
+            <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="221.0" layoutY="81.0" prefHeight="26.0" prefWidth="51.0" text="Rental" textFill="#2196f3">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Label>
-      <Label layoutX="269.0" layoutY="81.0" prefHeight="26.0" prefWidth="62.0" text="System" textFill="#2196f3">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Label>
-      <JFXPasswordField id="pass" fx:id="password" layoutX="161.0" layoutY="187.0" prefHeight="26.0" prefWidth="234.0" promptText="Enter Your Password" />
-      <ImageView fitHeight="48.0" fitWidth="43.0" layoutX="247.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+      <JFXPasswordField id="pass" fx:id="password" layoutX="168.0" layoutY="173.0" prefHeight="26.0" prefWidth="234.0" promptText="Enter Your Password" unFocusColor="#a0a2ab" />
+      <ImageView fitHeight="48.0" fitWidth="43.0" layoutX="264.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@i.jpg" />
          </image>
       </ImageView>
+      <Label fx:id="progress" layoutX="204.0" layoutY="347.0" text="Username Taken" textFill="#f23922">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
