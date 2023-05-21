@@ -37,7 +37,7 @@
             <Font size="14.0" />
          </font>
       </JFXButton>
-      <JFXCheckBox id="rememberM" fx:id="rememberM" layoutX="180.0" layoutY="237.0" text="Remember Me" textFill="#a0a2ab">
+      <JFXCheckBox id="rememberM" fx:id="remember" layoutX="180.0" layoutY="237.0" text="Remember Me" textFill="#a0a2ab">
          <font>
             <Font size="14.0" />
          </font>
@@ -65,14 +65,14 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <ImageView fitHeight="49.0" fitWidth="50.0" layoutX="275.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Capture.PNG" />
-         </image>
-      </ImageView>
-      <ImageView  fx:id="progress" fitHeight="49.0" fitWidth="68.0" layoutX="269.0" layoutY="323.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="progress" fitHeight="49.0" fitWidth="68.0" layoutX="269.0" layoutY="323.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@35.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="42.0" fitWidth="51.0" layoutX="268.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@i.jpg" />
          </image>
       </ImageView>
    </children>

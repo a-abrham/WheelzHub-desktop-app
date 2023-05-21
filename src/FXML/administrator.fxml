@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="589.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Administrator">
+   <children>
+      <Pane fx:id="pane" layoutX="14.0" layoutY="58.0" prefHeight="358.0" prefWidth="228.0">
+         <children>
+            <JFXButton id="addcars" fx:id="addcars" layoutX="26.0" layoutY="38.0" onAction="#AddCars" prefHeight="30.0" prefWidth="181.0" style="-fx-background-color: #1b125e;" text="Add Cars" textFill="#e1e0f2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="removeCars" layoutX="26.0" layoutY="86.0" onAction="#RemoveCars" prefHeight="36.0" prefWidth="181.0" style="-fx-background-color: #1b125e;" text="remove Cars" textFill="#d5e1f2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="Contact" layoutX="26.0" layoutY="134.0" onAction="#Contact" style="-fx-background-color: #1b125e;" text="Create Contact to User" textFill="#c1c9d9">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <AnchorPane id="Container" fx:id="Container" layoutX="250.0" layoutY="51.0" onDragDetected="#Contain" prefHeight="358.0" prefWidth="295.0" style="-fx-background-color: #105386;">
+         <children>
+            <Text layoutX="8.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This Page is Only granted to Admistors  So please Keep Password Confidentail. " wrappingWidth="294.93675231933594" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
