@@ -19,7 +19,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.image.ImageView;
+import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import DBconnection.DBhandler;
 
@@ -35,10 +36,10 @@ public class LoginController implements Initializable {
     private JFXPasswordField password;
 
     @FXML
-    private ImageView progress;
+    private Label progress;
 
     @FXML
-    private JFXCheckBox rememberM;
+    private JFXCheckBox remember;
 
     @FXML
     private JFXButton signUp;
@@ -71,45 +72,84 @@ public class LoginController implements Initializable {
     }
 
     public void loginAction() throws SQLException, IOException {
-        progress.setVisible(true);
         connection = handler.getConnection();
-        String loginQ = "SELECT * FROM users where username=? and password=?";
 
-        try {
-            pst = connection.prepareStatement(loginQ);
-            pst.setString(1, username.getText());
-            pst.setString(2, password.getText());
-
-            ResultSet rs = pst.executeQuery();
-
-            int count = 0;
-            while (rs.next()) {
-                count = count + 1;
-            }
-
-            if (count == 1) {
-                login.getScene().getWindow().hide();
-                Stage signUp = new Stage();
-                Parent root = FXMLLoader.load(getClass().getResource("/FXML/signupSuccess.fxml"));
-                Scene scene = new Scene(root);
-                signUp.setScene(scene);
-                signUp.show();
-                signUp.setResizable(false);
-            } else {
-                System.out.println("Username and password is not correct");
-            }
-        } catch (SQLException e1) {
-            e1.printStackTrace();
-        }
-
-        finally {
+        if (remember.isSelected()) {
+            String loginQ = "SELECT * FROM admins where username=? and password=?";
             try {
-                connection.close();
-            } catch (SQLException e2) {
-                e2.printStackTrace();
+                pst = connection.prepareStatement(loginQ);
+                pst.setString(1, username.getText());
+                pst.setString(2, password.getText());
+
+                ResultSet rs = pst.executeQuery();
+
+                int count = 0;
+                while (rs.next()) {
+                    count = count + 1;
+                }
+
+                if (count == 1) {
+                    login.getScene().getWindow().hide();
+                    Stage administratorStage = new Stage();
+                    Parent administratorRoot = FXMLLoader.load(getClass().getResource("/FXML/administrator.fxml"));
+                    Scene administratorScene = new Scene(administratorRoot);
+                    administratorStage.setScene(administratorScene);
+                    administratorStage.show();
+                } else {
+                    System.out.println("Username and password is not correct");
+                    progress.setVisible(true);
+
+                }
+            } catch (SQLException e1) {
+                e1.printStackTrace();
+            }
+
+            finally {
+                try {
+                    connection.close();
+                } catch (SQLException e2) {
+                    e2.printStackTrace();
+                }
+            }
+        } else {
+            String loginQ = "SELECT * FROM users where username=? and password=?";
+            try {
+                pst = connection.prepareStatement(loginQ);
+                pst.setString(1, username.getText());
+                pst.setString(2, password.getText());
+
+                ResultSet rs = pst.executeQuery();
+
+                int count = 0;
+                while (rs.next()) {
+                    count = count + 1;
+                }
+
+                if (count == 1) {
+                    login.getScene().getWindow().hide();
+                    Stage signUp = new Stage();
+                    Parent root = FXMLLoader.load(getClass().getResource("/FXML/homepage.fxml"));
+                    Scene scene = new Scene(root);
+                    signUp.setScene(scene);
+                    signUp.show();
+                    signUp.setResizable(false);
+                } else {
+                    System.out.println("Username and password is not correct");
+                    progress.setVisible(true);
+
+                }
+            } catch (SQLException e1) {
+                e1.printStackTrace();
+            }
+
+            finally {
+                try {
+                    connection.close();
+                } catch (SQLException e2) {
+                    e2.printStackTrace();
+                }
             }
         }
-
     }
 
     @Override

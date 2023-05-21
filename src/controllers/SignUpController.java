@@ -19,6 +19,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -42,6 +43,9 @@ public class SignUpController implements Initializable {
 
   @FXML
   private JFXTextField name;
+
+  @FXML
+  private Label progress;
 
   @FXML
   private AnchorPane parentPane;
@@ -72,12 +76,12 @@ public class SignUpController implements Initializable {
     name.setStyle("-fx-text-inner-color:#a0a2ab");
     location.setStyle("-fx-text-inner-color:#a0a2ab");
     password.setStyle("-fx-text-inner-color:#a0a2ab");
-
+    progress.setVisible(false);
     handler = new DBhandler(); // Initialize the DBhandler object
   }
 
   @FXML
-  void Database(ActionEvent event) {
+  void Database(ActionEvent event) throws IOException {
     try {
       Database();
     } catch (SQLException e) {
@@ -85,7 +89,7 @@ public class SignUpController implements Initializable {
     }
   }
 
-  public void Database() throws SQLException {
+  public void Database() throws SQLException, IOException {
     String inser = "INSERT INTO users(username, password, gender, location)" + "VALUES (?,?,?,?)";
     connection = handler.getConnection();
     try {
@@ -100,8 +104,16 @@ public class SignUpController implements Initializable {
       pst.setString(4, location.getText());
 
       pst.executeUpdate();
+
+      signup.getScene().getWindow().hide();
+      Stage signupStage = new Stage();
+      AnchorPane signupRoot = FXMLLoader.load(getClass().getResource("/FXML/signupSuccess.fxml"));
+      Scene signupScene = new Scene(signupRoot);
+      signupStage.setScene(signupScene);
+      signupStage.show();
+      signupStage.setResizable(false);
     } catch (SQLException e) {
-      e.printStackTrace();
+      progress.setVisible(true);
     }
   }
 
