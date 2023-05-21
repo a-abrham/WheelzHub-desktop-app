@@ -10,64 +10,64 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="Container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="645.0" prefWidth="353.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Finance">
+<AnchorPane fx:id="Container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="677.0" prefWidth="766.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Finance">
    <children>
-      <Pane layoutX="18.0" layoutY="17.0" prefHeight="609.0" prefWidth="306.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="18.0">
+      <Pane layoutX="18.0" layoutY="14.0" prefHeight="700.0" prefWidth="900.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="18.0">
          <children>
-            <ImageView fitHeight="49.0" fitWidth="51.0" layoutX="114.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="49.0" fitWidth="51.0" layoutX="342.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@i.jpg" />
                </image>
             </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="46.0" layoutX="23.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="42.0" fitWidth="46.0" layoutX="212.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@CompanyName.PNG" />
                </image>
             </ImageView>
-            <JFXTextField id="Comapny Name" layoutX="85.0" layoutY="102.0" prefHeight="25.0" prefWidth="191.0" promptText="Company Name" unFocusColor="#9e9696" />
-            <ImageView fitHeight="40.0" fitWidth="37.0" layoutX="23.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+            <JFXTextField id="Comapny Name" layoutX="274.0" layoutY="102.0" prefHeight="25.0" prefWidth="191.0" promptText="Company Name" unFocusColor="#9e9696" />
+            <ImageView fitHeight="40.0" fitWidth="37.0" layoutX="212.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Email.PNG" />
                </image>
             </ImageView>
-            <JFXTextField id="Email" fx:id="Email" layoutX="85.0" layoutY="138.0" prefHeight="25.0" prefWidth="191.0" promptText="Enail" unFocusColor="#9e9696" />
-            <ImageView fitHeight="32.0" fitWidth="119.0" layoutX="28.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+            <JFXTextField id="Email" fx:id="Email" layoutX="274.0" layoutY="138.0" prefHeight="25.0" prefWidth="191.0" promptText="Enail" unFocusColor="#9e9696" />
+            <ImageView fitHeight="32.0" fitWidth="119.0" layoutX="217.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Phone.PNG" />
                </image>
             </ImageView>
-            <JFXTextField id="Phone" fx:id="phone" layoutX="85.0" layoutY="183.0" prefHeight="25.0" prefWidth="191.0" promptText="Phone Number " unFocusColor="#9e9696" />
-            <ImageView fitHeight="32.0" fitWidth="119.0" layoutX="28.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
+            <JFXTextField id="Phone" fx:id="phone" layoutX="274.0" layoutY="183.0" prefHeight="25.0" prefWidth="191.0" promptText="Phone Number " unFocusColor="#9e9696" />
+            <ImageView fitHeight="32.0" fitWidth="119.0" layoutX="217.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@location.PNG" />
                </image>
             </ImageView>
-            <JFXTextField id="Address" fx:id="Address" layoutX="85.0" layoutY="228.0" prefHeight="25.0" prefWidth="191.0" promptText="Address" unFocusColor="#9e9696" />
-            <ImageView fitHeight="32.0" fitWidth="119.0" layoutX="28.0" layoutY="262.0" pickOnBounds="true" preserveRatio="true">
+            <JFXTextField id="Address" fx:id="Address" layoutX="274.0" layoutY="228.0" prefHeight="25.0" prefWidth="191.0" promptText="Address" unFocusColor="#9e9696" />
+            <ImageView fitHeight="32.0" fitWidth="119.0" layoutX="217.0" layoutY="262.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@City.PNG" />
                </image>
             </ImageView>
-            <JFXTextField id="City" fx:id="City" layoutX="85.0" layoutY="266.0" prefHeight="25.0" prefWidth="191.0" promptText="City" unFocusColor="#9e9696" />
-            <ImageView fitHeight="32.0" fitWidth="119.0" layoutX="28.0" layoutY="311.0" pickOnBounds="true" preserveRatio="true">
+            <JFXTextField id="City" fx:id="City" layoutX="274.0" layoutY="266.0" prefHeight="25.0" prefWidth="191.0" promptText="City" unFocusColor="#9e9696" />
+            <ImageView fitHeight="32.0" fitWidth="119.0" layoutX="217.0" layoutY="311.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@State.PNG" />
                </image>
             </ImageView>
-            <JFXTextField id="State" fx:id="State" layoutX="85.0" layoutY="311.0" prefHeight="25.0" prefWidth="191.0" promptText="State" unFocusColor="#9e9696" />
-            <ImageView fitHeight="32.0" fitWidth="119.0" layoutX="29.0" layoutY="354.0" pickOnBounds="true" preserveRatio="true">
+            <JFXTextField id="State" fx:id="State" layoutX="274.0" layoutY="311.0" prefHeight="25.0" prefWidth="191.0" promptText="State" unFocusColor="#9e9696" />
+            <ImageView fitHeight="32.0" fitWidth="119.0" layoutX="218.0" layoutY="354.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@messge.PNG" />
                </image>
             </ImageView>
-            <JFXTextArea layoutX="91.0" layoutY="343.0" prefHeight="109.0" prefWidth="191.0" promptText="Comment" unFocusColor="#b9b4b4" />
-            <JFXButton fx:id="Submit" layoutX="67.0" layoutY="476.0" onAction="#Finance" prefHeight="32.0" prefWidth="185.0" style="-fx-background-color: #b0b6c5;" text="Submit" textFill="#2e2c2c" />
-            <Label layoutX="92.0" layoutY="518.0" prefHeight="25.0" prefWidth="136.0" text="What is this for?" textFill="#b49797">
+            <JFXTextArea layoutX="280.0" layoutY="343.0" prefHeight="109.0" prefWidth="191.0" promptText="Comment" unFocusColor="#b9b4b4" />
+            <JFXButton fx:id="Submit" layoutX="272.0" layoutY="486.0" onAction="#Finance" prefHeight="32.0" prefWidth="185.0" style="-fx-background-color: #b0b6c5;" text="Submit" textFill="#2e2c2c" />
+            <Label layoutX="308.0" layoutY="536.0" prefHeight="25.0" prefWidth="136.0" text="What is this for?" textFill="#b49797">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <JFXButton id="BackButton" fx:id="backButton" layoutX="78.0" layoutY="549.0" onAction="#BackTo" prefHeight="30.0" prefWidth="169.0" text="Click Here to know why" textFill="#c1bcbc" underline="true">
+            <JFXButton id="BackButton" fx:id="backButton" layoutX="280.0" layoutY="580.0" onAction="#BackTo" prefHeight="30.0" prefWidth="169.0" text="Click Here to know why" textFill="#c1bcbc" underline="true">
                <font>
                   <Font size="14.0" />
                </font>

@@ -21,37 +21,37 @@
                   <Image url="@../../Car-rental-system-with-hellow-print-font-change/src/FXML/Capture.PNG" />
                </image>
             </ImageView>
-            <Label layoutX="33.0" layoutY="55.0" prefHeight="35.0" prefWidth="100.0" text="Wheels hub" textFill="WHITE">
+            <Label layoutX="33.0" layoutY="55.0" prefHeight="35.0" prefWidth="154.0" text="Wheels hub" textFill="WHITE">
                <font>
-                  <Font size="18.0" />
+                  <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Line endX="-59.4000129699707" layoutX="101.0" layoutY="90.0" startX="-100.0" stroke="#f7f7f7" />
-            <Label layoutX="18.0" layoutY="108.0" prefHeight="35.0" prefWidth="113.0" text="Dashboard" textFill="#eaeaea">
+            <Line endX="3.0" endY="7.62939453125E-6" layoutX="103.0" layoutY="97.0" startX="-100.0" stroke="#f7f7f7" />
+            <JFXButton fx:id="Finance" layoutX="49.0" layoutY="204.0" onAction="#Finances" prefHeight="51.0" prefWidth="162.0" text="Financing" textFill="#c4c0c0">
                <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <JFXButton fx:id="Finance" layoutX="21.0" layoutY="152.0" onAction="#Finances" prefHeight="35.0" prefWidth="89.0" text="Financing" textFill="#c4aeae">
-               <font>
-                  <Font name="System Bold" size="15.0" />
+                  <Font name="System Bold" size="24.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="OurSolution" layoutX="18.0" layoutY="195.0" onAction="#OurSolutions" prefHeight="35.0" prefWidth="112.0" text="Our Solution" textFill="#c4c0c0">
+            <JFXButton fx:id="OurSolution" layoutX="38.0" layoutY="255.0" onAction="#OurSolutions" prefHeight="51.0" prefWidth="185.0" text="Our Solution" textFill="#c4c0c0">
                <font>
-                  <Font name="System Bold" size="14.0" />
+                  <Font name="System Bold" size="24.0" />
                </font>
             </JFXButton>
-            <JFXButton id="Catagory" fx:id="Catagory" layoutX="25.0" layoutY="239.0" onAction="#Catagory" prefHeight="35.0" prefWidth="80.0" text="Catagory" textFill="#c4b7b7">
+            <JFXButton id="Catagory" fx:id="Catagory" layoutX="58.0" layoutY="306.0" onAction="#Catagory" prefHeight="51.0" prefWidth="145.0" text="Catagory" textFill="#c4c0c0">
                <font>
-                  <Font name="System Bold" size="14.0" />
+                  <Font name="System Bold" size="24.0" />
                </font>
             </JFXButton>
-            <Line endX="44.4000244140625" endY="3.0517578125E-5" layoutX="95.0" layoutY="438.0" startX="-66.99999237060547" startY="3.0517578125E-5" stroke="#dcd6d6" />
-            <JFXButton fx:id="checkout" layoutX="39.0" layoutY="465.0" onAction="#checkout" prefHeight="35.0" prefWidth="89.0" style="-fx-border-color: #fff; -fx-background-color: #101356;" text="CHECK OUT" textFill="WHITE" />
-            <JFXButton id="about" fx:id="about" layoutX="23.0" layoutY="271.0" onAction="#about" prefHeight="35.0" prefWidth="100.0" text="About Us" textFill="#c4b7b7">
+            <Line endX="44.4000244140625" endY="3.0517578125E-5" layoutX="67.0" layoutY="437.0" startX="-66.99999237060547" startY="3.0517578125E-5" stroke="#dcd6d6" />
+            <JFXButton fx:id="checkout" layoutX="21.0" layoutY="463.0" onAction="#checkout" prefHeight="35.0" prefWidth="89.0" style="-fx-border-color: #fff; -fx-background-color: #101356;" text="CHECK OUT" textFill="WHITE" />
+            <JFXButton id="about" fx:id="about" layoutX="58.0" layoutY="357.0" onAction="#about" prefHeight="51.0" prefWidth="145.0" text="About Us" textFill="#c4c0c0">
                <font>
-                  <Font name="System Bold" size="14.0" />
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="Home" layoutX="49.0" layoutY="153.0" onAction="#Home" prefHeight="51.0" prefWidth="162.0" text="Home" textFill="#c4c0c0">
+               <font>
+                  <Font name="System Bold" size="24.0" />
                </font>
             </JFXButton>
          </children>
