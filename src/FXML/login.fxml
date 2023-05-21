@@ -12,7 +12,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
    <children>
-      <JFXButton fx:id="forgotPassword" layoutX="206.0" layoutY="281.0" prefHeight="26.0" prefWidth="176.0" text="Forgot Your password?" textFill="#a0a2ab" underline="true">
+      <JFXButton fx:id="forgotPassword" layoutX="200.0" layoutY="291.0" prefHeight="26.0" prefWidth="176.0" text="Forgot your password?" textFill="#a0a2ab" underline="true">
          <font>
             <Font size="14.0" />
          </font>
@@ -32,44 +32,34 @@
             <Font size="14.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="login" layoutX="341.0" layoutY="233.0" onAction="#loginAction" prefHeight="26.0" prefWidth="68.0" style="-fx-background-color: #2196f3;" text="Login" textFill="#eaebec">
+      <JFXButton fx:id="login" layoutX="341.0" layoutY="248.0" onAction="#loginAction" prefHeight="26.0" prefWidth="68.0" style="-fx-background-color: #2196f3;" text="Login" textFill="#eaebec">
          <font>
             <Font size="14.0" />
          </font>
       </JFXButton>
-      <JFXCheckBox id="rememberM" fx:id="remember" layoutX="180.0" layoutY="237.0" text="Remember Me" textFill="#a0a2ab">
+      <JFXCheckBox id="rememberM" fx:id="remember" layoutX="159.0" layoutY="253.0" text="Login as an admin" textFill="#a0a2ab">
          <font>
             <Font size="14.0" />
          </font>
       </JFXCheckBox>
-      <ImageView fitHeight="32.0" fitWidth="25.0" layoutX="147.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="147.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@user.PNG" />
          </image></ImageView>
-      <ImageView fitHeight="30.0" fitWidth="37.0" layoutX="144.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="20.0" fitWidth="25.0" layoutX="144.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@pass.PNG" />
          </image></ImageView>
-      <Label layoutX="213.0" layoutY="85.0" prefHeight="20.0" prefWidth="37.0" text="Car" textFill="#2196f3">
+      <Label layoutX="229.0" layoutY="71.0" prefHeight="30.0" prefWidth="118.0" text="WheelzHub" textFill="#2196f3">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="251.0" layoutY="85.0" prefHeight="32.0" prefWidth="68.0" text="Rental " textFill="#2196f3">
+      <Label fx:id="progress" layoutX="158.0" layoutY="336.0" prefHeight="32.0" prefWidth="260.0" text=" Incorrect Account Details" textAlignment="CENTER" textFill="#f23922">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="322.0" layoutY="85.0" prefHeight="32.0" prefWidth="79.0" text="System" textFill="#2196f3">
-         <font>
-            <Font size="22.0" />
-         </font>
-      </Label>
-      <ImageView fx:id="progress" fitHeight="49.0" fitWidth="68.0" layoutX="269.0" layoutY="323.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@35.gif" />
-         </image>
-      </ImageView>
       <ImageView fitHeight="42.0" fitWidth="51.0" layoutX="268.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@i.jpg" />
