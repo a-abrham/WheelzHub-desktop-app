@@ -73,7 +73,6 @@ public class Administrator implements Initializable {
             double anchorPaneWidth = newWidth.doubleValue();
             double containerWidth = anchorPaneWidth * 0.6; // 60% of the anchorpane width
             double containerLeftOffset = anchorPaneWidth * 0.3; // 30% of the anchorpane width
-            double containerRightOffset = anchorPaneWidth * 0.1; // 10% of the anchorpane width
 
             // Set the width and left/right offsets of the Container AnchorPane
             Container.setPrefWidth(containerWidth);

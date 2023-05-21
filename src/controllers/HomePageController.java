@@ -2,11 +2,16 @@ package controllers;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXToolbar;
 
+import DBconnection.DBhandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -48,6 +53,10 @@ public class HomePageController implements Initializable {
 
     @FXML
     private Text wellcome;
+
+    private Connection connection;
+    private DBhandler handler;
+    private PreparedStatement pst;
 
     @FXML
     void Catagory(ActionEvent event) {
@@ -206,10 +215,11 @@ public class HomePageController implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         Holder.widthProperty().addListener((obs, oldWidth, newWidth) -> {
-            double panewidth = welcome.getWidth();
+            // double panewidth = welcome.getWidth();
             double anchorPaneWidth = newWidth.doubleValue();
-            double containerWidth = anchorPaneWidth * 0.5; // 60% of the anchorpane width
-            double containerLeftOffset = anchorPaneWidth * 0.3; // 30% of the anchorpane width
+            // double containerWidth = anchorPaneWidth * 0.5; // 60% of the anchorpane width
+            // double containerLeftOffset = anchorPaneWidth * 0.3; // 30% of the anchorpane
+            // width
             // double containerRightOffset = anchorPaneWidth * 0.2; // 10% of the anchorpane
             // width
 
@@ -222,6 +232,46 @@ public class HomePageController implements Initializable {
             double leftsideofwellcome = anchorPaneWidth * 4.5;
             AnchorPane.setRightAnchor(wellcome, leftsideofwellcome);
             AnchorPane.setLeftAnchor(wellcome, leftsideofwellcome);
+            //
+
         });
+
+        // db fetch
+
+        handler = new DBhandler();
+
+        String loginQuery = "SELECT * FROM cars";
+        try {
+            connection = handler.getConnection();
+            pst = connection.prepareStatement(loginQuery);
+            ResultSet rs = pst.executeQuery();
+
+            while (rs.next()) {
+                String make = rs.getString("make");
+                String model = rs.getString("model");
+                String price = rs.getString("year");
+                String color = rs.getString("color");
+                String mileage = rs.getString("mileage");
+                String image = rs.getString("image1");
+
+                Car car = new Car(make, model, price, color, mileage, image);
+                System.out.println(car.getImage1());
+            }
+
+            rs.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (pst != null) {
+                    pst.close();
+                }
+                if (connection != null) {
+                    connection.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }

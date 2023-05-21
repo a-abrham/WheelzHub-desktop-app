@@ -63,10 +63,10 @@ public class Finance implements Initializable {
         Holder.getChildren().add(node);
     }
 
-    @FXML
-    void Finance(ActionEvent event) {
+    // @FXML
+    // void Finance(ActionEvent event) {
 
-    }
+    // }
 
     private AnchorPane Holder;
 
