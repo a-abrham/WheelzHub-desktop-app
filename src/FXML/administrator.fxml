@@ -15,21 +15,26 @@
                   <Font size="14.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="removeCars" layoutX="26.0" layoutY="86.0" onAction="#RemoveCars" prefHeight="36.0" prefWidth="181.0" style="-fx-background-color: #1b125e;" text="remove Cars" textFill="#d5e1f2">
+            <JFXButton fx:id="Contact" layoutX="26.0" layoutY="134.0" onAction="#Contact" style="-fx-background-color: #1b125e;" text="Create Contact to User" textFill="#c1c9d9">
                <font>
                   <Font size="16.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="Contact" layoutX="26.0" layoutY="134.0" onAction="#Contact" style="-fx-background-color: #1b125e;" text="Create Contact to User" textFill="#c1c9d9">
+            <JFXButton id="Resevation" fx:id="Resevation" layoutX="24.0" layoutY="84.0" onAction="#ReservationMethod" prefHeight="36.0" prefWidth="181.0" style="-fx-background-color: #1b125e;" text="Reservation" textFill="#c1c9d9">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="returnCar" layoutX="24.0" layoutY="186.0" onAction="#Return" prefHeight="36.0" prefWidth="181.0" style="-fx-background-color: #1b125e;" text="Return car" textFill="#c1c9d9">
                <font>
                   <Font size="16.0" />
                </font>
             </JFXButton>
          </children>
       </Pane>
-      <AnchorPane id="Container" fx:id="Container" layoutX="250.0" layoutY="51.0" onDragDetected="#Contain" prefHeight="358.0" prefWidth="295.0" style="-fx-background-color: #105386;">
+      <AnchorPane id="Container" fx:id="Container" layoutX="250.0" layoutY="51.0" onDragDetected="#Contain" prefHeight="358.0" prefWidth="295.0" style="-fx-background-color: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;?import com.jfoenix.controls.JFXButton?&gt;&lt;?import javafx.scene.text.Font?&gt;&lt;JFXButton fx:id=&quot;Contact&quot; layoutX=&quot;26.0&quot; layoutY=&quot;134.0&quot; onAction=&quot;#Contact&quot; style=&quot;-fx-background-color: #1b125e;&quot; text=&quot;Create Contact to User&quot; textFill=&quot;#c1c9d9&quot; xmlns=&quot;http://javafx.com/javafx/19&quot; xmlns:fx=&quot;http://javafx.com/fxml/1&quot;&gt;   &lt;font&gt;      &lt;Font size=&quot;16.0&quot; /&gt;   &lt;/font&gt;&lt;/JFXButton&gt;;">
          <children>
-            <Text layoutX="8.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This Page is Only granted to Admistors  So please Keep Password Confidentail. " wrappingWidth="294.93675231933594" />
+            <Text fill="#bbf1f4" layoutX="7.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This Page is Only granted to Admistors  So please Keep Password Confidentail. " wrappingWidth="294.93675231933594" />
          </children>
       </AnchorPane>
    </children>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="1090.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Reservation">
+   <children>
+      <JFXButton id="financingButton" fx:id="financingButton" layoutX="539.0" layoutY="584.0" onAction="#NavigateTofinance" prefHeight="26.0" prefWidth="176.0" text="Click here to know" textFill="#a0a2ab" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField id="companyName" fx:id="companyName" focusColor="#6f86c7" layoutX="509.0" layoutY="133.0" prefHeight="26.0" prefWidth="230.0" promptText="Company Name" style="-fx-text-inner-color: #a0a2ab;" unFocusColor="#999999">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField id="Email" fx:id="Email" layoutX="509.0" layoutY="176.0" prefHeight="26.0" prefWidth="230.0" promptText="Email" style="-fx-text-inner-color: #a0a2ab;" unFocusColor="#b4b4b4">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXPasswordField>
+      <ImageView fitHeight="32.0" fitWidth="25.0" layoutX="465.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@CompanyName.PNG" />
+         </image></ImageView>
+      <ImageView fitHeight="30.0" fitWidth="37.0" layoutX="460.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Email.PNG" />
+         </image></ImageView>
+      <Label layoutX="500.0" layoutY="98.0" prefHeight="20.0" prefWidth="37.0" text="Car" textFill="#2196f3">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="544.0" layoutY="98.0" prefHeight="32.0" prefWidth="68.0" text="Rental " textFill="#2196f3">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="624.0" layoutY="98.0" prefHeight="32.0" prefWidth="79.0" text="System" textFill="#2196f3">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="progress" fitHeight="49.0" fitWidth="68.0" layoutX="269.0" layoutY="323.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@35.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="42.0" fitWidth="51.0" layoutX="558.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@i.jpg" />
+         </image>
+      </ImageView>
+      <JFXPasswordField id="PhoneNumber" fx:id="PhoneNumber" layoutX="509.0" layoutY="216.0" prefHeight="26.0" prefWidth="230.0" promptText="Phone Number" style="-fx-text-inner-color: #a0a2ab;" unFocusColor="#b4b4b4">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXPasswordField id="City" fx:id="City" layoutX="509.0" layoutY="264.0" prefHeight="26.0" prefWidth="230.0" promptText="City" style="-fx-text-inner-color: #a0a2ab;" unFocusColor="#b4b4b4">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXPasswordField id="State" fx:id="State" layoutX="509.0" layoutY="309.0" prefHeight="26.0" prefWidth="230.0" promptText="State" style="-fx-text-inner-color: #a0a2ab;" unFocusColor="#b4b4b4">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXTextArea id="Comment" fx:id="Comment" layoutX="509.0" layoutY="353.0" prefHeight="122.0" prefWidth="230.0" promptText="Comment" />
+      <JFXButton id="Submit" fx:id="Submit" layoutX="548.0" layoutY="504.0" onAction="#Finance" prefHeight="30.0" prefWidth="152.0" style="-fx-background-color: #2196f3;" text="Submit" textFill="#c7c5c5" />
+      <Label contentDisplay="CENTER" layoutX="578.0" layoutY="544.0" prefHeight="26.0" prefWidth="98.0" text="What is this for?" textFill="#b9b3b3" />
+      <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="465.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Phone.PNG" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="42.0" fitWidth="35.0" layoutX="460.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@City.PNG" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="461.0" layoutY="306.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@State.PNG" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="42.0" fitWidth="35.0" layoutX="460.0" layoutY="353.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@messge.PNG" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
