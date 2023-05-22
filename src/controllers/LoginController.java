@@ -39,6 +39,9 @@ public class LoginController implements Initializable {
     private Label progress;
 
     @FXML
+    private Label load;
+
+    @FXML
     private JFXCheckBox remember;
 
     @FXML
@@ -52,7 +55,7 @@ public class LoginController implements Initializable {
         try {
             loginAction();
         } catch (SQLException e) {
-            e.printStackTrace();
+            load.setVisible(true);
         }
     }
 
@@ -102,8 +105,8 @@ public class LoginController implements Initializable {
 
                 } else {
                     System.out.println("Username and password is not correct");
+                    load.setVisible(false);
                     progress.setVisible(true);
-
                 }
             } catch (SQLException e1) {
                 e1.printStackTrace();
@@ -143,8 +146,8 @@ public class LoginController implements Initializable {
                     signUp.setResizable(false);
                 } else {
                     System.out.println("Username and password is not correct");
+                    load.setVisible(false);
                     progress.setVisible(true);
-
                 }
             } catch (SQLException e1) {
                 e1.printStackTrace();
@@ -163,9 +166,7 @@ public class LoginController implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         progress.setVisible(false);
-        username.setStyle("-fx-text-inner-color:#a0a2ab");
-        password.setStyle("-fx-text-inner-color:#a0a2ab");
-
+        load.setVisible(false);
         handler = new DBhandler();
     }
 }
