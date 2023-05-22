@@ -22,6 +22,9 @@ public class Administrator implements Initializable {
     private AnchorPane Container;
 
     @FXML
+    private JFXButton Resevation;
+
+    @FXML
     private JFXButton addcars;
 
     @FXML
@@ -31,7 +34,7 @@ public class Administrator implements Initializable {
     private Pane pane;
 
     @FXML
-    private JFXButton removeCars;
+    private JFXButton returnCar;
 
     @FXML
     void AddCars(ActionEvent event) {
@@ -62,8 +65,37 @@ public class Administrator implements Initializable {
     }
 
     @FXML
-    void RemoveCars(ActionEvent event) {
+    void ReservationMethod(ActionEvent event) {
+        Container.getChildren().clear();
+        Container.getChildren().clear();
+        try {
+            AnchorPane homePane = FXMLLoader.load(getClass().getResource("/FXML/Resevation.fxml"));
+            setNode3(homePane);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
+    private void setNode3(AnchorPane node) {
+        Container.getChildren().clear();
+        Container.getChildren().add(node);
+    }
+
+    @FXML
+    void Return(ActionEvent event) {
+        Container.getChildren().clear();
+        Container.getChildren().clear();
+        try {
+            AnchorPane homePane = FXMLLoader.load(getClass().getResource("/FXML/ReturnCars.fxml"));
+            setNode4(homePane);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void setNode4(AnchorPane node) {
+        Container.getChildren().clear();
+        Container.getChildren().add(node);
     }
 
     @Override

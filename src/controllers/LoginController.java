@@ -97,6 +97,9 @@ public class LoginController implements Initializable {
                     Scene administratorScene = new Scene(administratorRoot);
                     administratorStage.setScene(administratorScene);
                     administratorStage.show();
+                    administratorStage.setMaximized(true);
+                    administratorStage.setResizable(false);
+
                 } else {
                     System.out.println("Username and password is not correct");
                     progress.setVisible(true);
@@ -136,7 +139,8 @@ public class LoginController implements Initializable {
                     Scene scene = new Scene(root);
                     signUp.setScene(scene);
                     signUp.show();
-                    signUp.setResizable(true);
+                    signUp.setMaximized(true);
+                    signUp.setResizable(false);
                 } else {
                     System.out.println("Username and password is not correct");
                     progress.setVisible(true);
