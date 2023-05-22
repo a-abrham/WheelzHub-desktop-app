@@ -65,5 +65,10 @@
             <Image url="@i.jpg" />
          </image>
       </ImageView>
+      <Label fx:id="load" layoutX="164.0" layoutY="336.0" prefHeight="32.0" prefWidth="260.0" text="     Failed to connect ..." textAlignment="CENTER" textFill="#f23922">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

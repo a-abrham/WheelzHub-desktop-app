@@ -61,7 +61,7 @@
                </image>
             </ImageView>
             <JFXTextArea layoutX="91.0" layoutY="343.0" prefHeight="109.0" prefWidth="191.0" promptText="Comment" unFocusColor="#b9b4b4" />
-<JFXButton fx:id="Submit" layoutX="67.0" layoutY="476.0" onAction="#Finance" prefHeight="32.0" prefWidth="185.0" style="-fx-background-color: #b0b6c5;" text="Submit" textFill="#2e2c2c" />
+<JFXButton fx:id="Submit" layoutX="67.0" layoutY="476.0" onAction="#BackTo" prefHeight="32.0" prefWidth="185.0" style="-fx-background-color: #b0b6c5;" text="Submit" textFill="#2e2c2c" />
             <Label layoutX="92.0" layoutY="518.0" prefHeight="25.0" prefWidth="136.0" text="What is this for?" textFill="#b49797">
                <font>
                   <Font size="14.0" />
