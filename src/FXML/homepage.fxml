@@ -13,9 +13,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="holder" maxHeight="902.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="100.0" prefHeight="800.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomePageController">
+<AnchorPane fx:id="holder" maxHeight="939.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="100.0" prefHeight="891.0" prefWidth="1565.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomePageController">
    <children>
-      <Pane layoutX="-5.0" prefHeight="902.0" prefWidth="311.0" style="-fx-background-color: #19264c;">
+      <Pane layoutX="-5.0" prefHeight="912.0" prefWidth="311.0" style="-fx-background-color: #19264c;">
          <children>
             <Button layoutX="177.0" layoutY="14.0" mnemonicParsing="false" opacity="0.0" prefHeight="22.0" prefWidth="0.0" />
             <Label layoutX="33.0" layoutY="55.0" prefHeight="35.0" prefWidth="154.0" text="Wheels hub" textFill="WHITE">
@@ -54,9 +54,9 @@
             <JFXButton fx:id="checkout1" layoutX="21.0" layoutY="510.0" onAction="#checkout" prefHeight="35.0" prefWidth="89.0" style="-fx-border-color: #fff; -fx-background-color: #101356;" text="Log Out" textFill="WHITE" />
          </children>
       </Pane>
-      <AnchorPane fx:id="Holder" layoutX="307.0" layoutY="1.0" prefHeight="902.0" prefWidth="1258.0" style="-fx-background-color: #b0b6c5;">
+      <AnchorPane fx:id="Holder" layoutX="307.0" layoutY="1.0" prefHeight="867.0" prefWidth="1202.0" style="-fx-background-color: #b0b6c5;">
          <children>
-            <JFXToolbar fx:id="welcome" prefHeight="47.0" prefWidth="664.0" style="-fx-background-color: #19264c;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <JFXToolbar fx:id="welcome" layoutX="-7.0" layoutY="-4.0" prefHeight="51.0" prefWidth="1265.0" style="-fx-background-color: #19264c;" AnchorPane.leftAnchor="-7.0" AnchorPane.rightAnchor="0.0">
                <center>
                   <Text fx:id="wellcome" fill="#cbdcf4" strokeType="OUTSIDE" strokeWidth="0.0" text="Well Come " wrappingWidth="96.14337176084518" BorderPane.alignment="CENTER">
                      <font>
@@ -91,7 +91,7 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton prefHeight="41.0" prefWidth="410.0" style="-fx-background-color: #19264c;" text="Recently added cars" textFill="WHITE" AnchorPane.leftAnchor="122.0" AnchorPane.rightAnchor="83.0" />
+                  <JFXButton layoutX="-2.0" prefHeight="42.0" prefWidth="1258.0" style="-fx-background-color: #19264c;" text="Recently added cars" textFill="WHITE" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="2.0" />
                   <JFXButton contentDisplay="TOP" layoutX="1093.0" layoutY="97.0" prefHeight="131.0" prefWidth="80.0" text="Next">
                      <graphic>
                         <ImageView fitHeight="77.0" fitWidth="89.0" pickOnBounds="true" preserveRatio="true">
@@ -108,6 +108,7 @@
             </AnchorPane>
             <AnchorPane fx:id="holder" layoutY="375.0" minWidth="728.0" prefHeight="526.0" prefWidth="1258.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="375.0">
                <children>
+                  <JFXButton layoutX="-3.0" layoutY="14.0" prefHeight="42.0" prefWidth="1258.0" style="-fx-background-color: #19264c;" text="Featured cars" textFill="WHITE" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="3.0" />
                   <JFXButton fx:id="item" contentDisplay="TOP" layoutX="66.0" layoutY="149.0" onAction="#navigate" prefHeight="205.0" prefWidth="215.0" style="-fx-background-color: #373C4F;" text="Toyota" textFill="WHITE">
                      <font>
                         <Font name="Harlow Solid Italic" size="19.0" />
@@ -120,7 +121,6 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton layoutX="85.0" layoutY="14.0" prefHeight="41.0" prefWidth="581.0" style="-fx-background-color: #19264c;" text="Featured cars" textFill="WHITE" AnchorPane.leftAnchor="85.0" AnchorPane.rightAnchor="62.0" />
                   <JFXButton fx:id="item" contentDisplay="TOP" layoutX="338.0" layoutY="149.0" onAction="#navigate" prefHeight="206.0" prefWidth="210.0" style="-fx-background-color: #373C4F;" text="Toyota" textFill="WHITE">
                      <font>
                         <Font name="Harlow Solid Italic" size="19.0" />
@@ -149,7 +149,6 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton layoutX="85.0" layoutY="14.0" prefHeight="41.0" prefWidth="581.0" style="-fx-background-color: #19264c;" text="Featured cars" textFill="WHITE" AnchorPane.leftAnchor="85.0" AnchorPane.rightAnchor="62.0" />
                   <JFXButton fx:id="item1" contentDisplay="TOP" layoutX="338.0" layoutY="149.0" onAction="#navigate" prefHeight="206.0" prefWidth="210.0" style="-fx-background-color: #373C4F;" text="Toyota" textFill="WHITE">
                      <font>
                         <Font name="Harlow Solid Italic" size="19.0" />

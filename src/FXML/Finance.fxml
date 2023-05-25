@@ -14,7 +14,7 @@
          </font>
       </Label>
       <JFXTextArea fx:id="text" layoutX="85.0" layoutY="90.0" style="-fx-inner-color: white;" text=" &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est sequi, delectus unde tempore a, odit illo nam ipsam magnam, dolor sed quidem ipsum perspiciatis facilis labore doloribus asperiores exercitationem quaerat.&lt;/p&gt;&#10; &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est sequi, delectus unde tempore a, odit illo nam ipsam magnam, dolor sed quidem ipsum perspiciatis facilis labore doloribus asperiores exercitationem quaerat.&lt;/p&gt;&#10; &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est sequi, delectus unde tempore a, odit illo nam ipsam magnam, dolor sed quidem ipsum perspiciatis facilis labore doloribus asperiores exercitationem quaerat.&lt;/p&gt;" unFocusColor="#ececec" />
-      <JFXButton id="buttonToBack" fx:id="buttonToBack" layoutX="203.0" layoutY="304.0" onAction="#BackTo" prefHeight="31.0" prefWidth="173.0" text="Back to Registration" textFill="#dcd0d0">
+      <JFXButton id="buttonToBack" fx:id="buttonToBack" layoutX="203.0" layoutY="304.0" onAction="#back" prefHeight="31.0" prefWidth="173.0" text="Back to Registration" textFill="#dcd0d0">
          <font>
             <Font size="15.0" />
          </font>

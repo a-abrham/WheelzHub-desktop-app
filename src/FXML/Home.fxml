@@ -9,11 +9,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="holder" maxHeight="902.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="100.0" prefHeight="661.0" prefWidth="763.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomePageController">
+<AnchorPane fx:id="holder" maxHeight="939.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="100.0" prefHeight="891.0" prefWidth="1565.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomePageController">
    <children>
-      <AnchorPane fx:id="Holder" layoutX="-1.0" prefHeight="662.0" prefWidth="763.0" style="-fx-background-color: #b0b6c5;">
+      <AnchorPane fx:id="Holder" layoutY="1.0" prefHeight="912.0" prefWidth="1565.0" style="-fx-background-color: #b0b6c5;">
          <children>
-            <JFXToolbar fx:id="welcome" prefHeight="47.0" prefWidth="664.0" style="-fx-background-color: #19264c;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <JFXToolbar fx:id="welcome" layoutX="-7.0" layoutY="-4.0" prefHeight="51.0" prefWidth="1265.0" style="-fx-background-color: #19264c;" AnchorPane.leftAnchor="-7.0" AnchorPane.rightAnchor="0.0">
                <center>
                   <Text fx:id="wellcome" fill="#cbdcf4" strokeType="OUTSIDE" strokeWidth="0.0" text="Well Come " wrappingWidth="96.14337176084518" BorderPane.alignment="CENTER">
                      <font>
@@ -22,9 +22,9 @@
                   </Text>
                </center>
             </JFXToolbar>
-            <AnchorPane fx:id="toplist" layoutX="-2.0" layoutY="47.0" prefHeight="318.0" prefWidth="758.0">
+            <AnchorPane fx:id="toplist" layoutY="73.0" prefHeight="315.0" prefWidth="1566.0" AnchorPane.bottomAnchor="524.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="73.0">
                <children>
-                  <JFXButton fx:id="item" contentDisplay="TOP" layoutX="377.0" layoutY="74.0" onAction="#navigate" prefHeight="205.0" prefWidth="215.0" style="-fx-background-color: #373C4F;" text="Toyota" textFill="WHITE">
+                  <JFXButton fx:id="item" contentDisplay="TOP" layoutX="362.0" layoutY="51.0" onAction="#navigate" prefHeight="205.0" prefWidth="215.0" style="-fx-background-color: #373C4F;" text="Toyota" textFill="WHITE">
                      <font>
                         <Font name="Harlow Solid Italic" size="19.0" />
                      </font>
@@ -36,7 +36,7 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton fx:id="item" contentDisplay="TOP" layoutX="91.0" layoutY="74.0" onAction="#navigate" prefHeight="205.0" prefWidth="215.0" style="-fx-background-color: #373C4F;" text="Toyota" textFill="WHITE">
+                  <JFXButton fx:id="item" contentDisplay="TOP" layoutX="82.0" layoutY="51.0" onAction="#navigate" prefHeight="205.0" prefWidth="215.0" style="-fx-background-color: #373C4F;" text="Toyota" textFill="WHITE">
                      <font>
                         <Font name="Harlow Solid Italic" size="19.0" />
                      </font>
@@ -48,40 +48,42 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton layoutX="97.0" layoutY="14.0" prefHeight="42.0" prefWidth="567.0" style="-fx-background-color: #19264c;" text="Recently added cars" textFill="WHITE" AnchorPane.leftAnchor="97.0" AnchorPane.rightAnchor="94.0" />
-                  <JFXButton contentDisplay="TOP" layoutX="640.0" layoutY="130.0" prefHeight="131.0" prefWidth="106.0" text="Next">
+                  <JFXButton layoutX="-2.0" prefHeight="42.0" prefWidth="1258.0" style="-fx-background-color: #19264c;" text="Recently added cars" textFill="WHITE" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="2.0" />
+                  <JFXButton contentDisplay="TOP" layoutX="1093.0" layoutY="97.0" prefHeight="131.0" prefWidth="80.0" text="Next">
+                     <graphic>
+                        <ImageView fitHeight="77.0" fitWidth="89.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@next.PNG" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                      <font>
                         <Font size="23.0" />
                      </font>
                   </JFXButton>
-                  <ImageView fitHeight="77.0" fitWidth="89.0" layoutX="654.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@next.PNG" />
-                     </image>
-                  </ImageView>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="holder" layoutX="-15.0" layoutY="350.0" minWidth="475.0" prefHeight="296.0" prefWidth="766.0">
+            <AnchorPane fx:id="holder" layoutY="388.0" minWidth="728.0" prefHeight="523.0" prefWidth="1566.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="388.0">
                <children>
-                  <JFXButton layoutX="83.0" layoutY="24.0" prefHeight="41.0" prefWidth="581.0" style="-fx-background-color: #19264c;" text="Featured cars" textFill="WHITE" AnchorPane.leftAnchor="83.0" AnchorPane.rightAnchor="64.0" />
-                  <JFXButton fx:id="item" contentDisplay="TOP" layoutX="446.0" layoutY="88.0" onAction="#navigate" prefHeight="206.0" prefWidth="210.0" style="-fx-background-color: #373C4F;" text="Toyota" textFill="WHITE">
+                  <JFXButton layoutY="-7.0" prefHeight="42.0" prefWidth="1258.0" style="-fx-background-color: #19264c;" text="Featured cars" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <JFXButton fx:id="item" contentDisplay="TOP" layoutX="95.0" layoutY="149.0" onAction="#navigate" prefHeight="205.0" prefWidth="215.0" style="-fx-background-color: #373C4F;" text="Toyota" textFill="WHITE">
                      <font>
                         <Font name="Harlow Solid Italic" size="19.0" />
                      </font>
                      <graphic>
-                        <ImageView fitHeight="150.0" fitWidth="155.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="150.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@i.jpg" />
                            </image>
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton fx:id="item" contentDisplay="TOP" layoutX="109.0" layoutY="88.0" onAction="#navigate" prefHeight="205.0" prefWidth="215.0" style="-fx-background-color: #373C4F;" text="Toyota" textFill="WHITE">
+                  <JFXButton fx:id="item" contentDisplay="TOP" layoutX="378.0" layoutY="148.0" onAction="#navigate" prefHeight="206.0" prefWidth="210.0" style="-fx-background-color: #373C4F;" text="Toyota" textFill="WHITE">
                      <font>
                         <Font name="Harlow Solid Italic" size="19.0" />
                      </font>
                      <graphic>
-                        <ImageView fitHeight="150.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="150.0" fitWidth="155.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@i.jpg" />
                            </image>

@@ -7,15 +7,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="658.0" prefWidth="1200.0" style="-fx-background-color: #2D3447#1b2b63;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="658.0" prefWidth="1200.0" style="-fx-background-color: #2D3447#1b2b63;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.OurSolution">
    <children>
       <Label layoutX="48.0" layoutY="35.0" prefHeight="34.0" prefWidth="170.0" text="Our Solutions" textFill="#c4baba">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <JFXTextArea layoutX="427.0" layoutY="357.0" prefHeight="246.0" prefWidth="430.0" text="We understand the challenges of buying or renting a car and have developed tailored solutions to make the process easier and more convenient.&#10;&#10;&#10;A wide selection of vehicles for sale and rent.&#10;&#10;Financing options for customers who need help purchasing a car.&#10;&#10;Affordable prices for both sales and rentals.&#10;&#10;Explore our wide range of cars for sale or rent." unFocusColor="#f0d8d800" />
-      <ImageView fitHeight="353.0" fitWidth="504.0" layoutX="48.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+      <JFXTextArea fx:id="text" editable="false" focusColor="#405aa8" layoutX="48.0" layoutY="335.0" prefHeight="298.0" prefWidth="586.0" text="We understand the challenges associated with buying or renting a car and have developed customized solutions to simplify and enhance the process.&#10;&#10;We offer an extensive selection of vehicles available for sale and rent, providing you with a diverse range of options to choose from.&#10;&#10;For customers in need of financial assistance to purchase a car, we provide flexible financing options tailored to your specific needs.&#10;&#10;Our prices are designed to be affordable, ensuring that both our sales and rental services are accessible to a wide range of customers.&#10;&#10;Discover our extensive collection of cars available for sale or rent, and find the perfect vehicle that suits your preferences and requirements." unFocusColor="#f0d8d800">
+         <font>
+            <Font size="13.0" />
+         </font></JFXTextArea>
+      <ImageView fitHeight="248.0" fitWidth="521.0" layoutX="62.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@hehle.PNG" />
          </image>

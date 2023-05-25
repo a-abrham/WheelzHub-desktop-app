@@ -16,8 +16,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 public class HomePageController implements Initializable {
 
@@ -35,6 +39,9 @@ public class HomePageController implements Initializable {
 
     @FXML
     private JFXButton OurSolution;
+
+    @FXML
+    private JFXButton logout;
 
     @FXML
     private JFXButton checkout;
@@ -105,8 +112,16 @@ public class HomePageController implements Initializable {
         Holder.getChildren().clear();
         holder.getChildren().clear();
         try {
-            AnchorPane homePane = FXMLLoader.load(getClass().getResource("/FXML/checkout.fxml"));
-            setNode5(homePane);
+            Holder.getScene().getWindow().hide();
+            Stage login = new Stage();
+            Image icon = new Image(getClass().getResourceAsStream("../img/car.png"));
+            login.getIcons().add(icon);
+            Parent root = FXMLLoader.load(getClass().getResource("/FXML/login.fxml"));
+            Scene scene = new Scene(root);
+            login.setScene(scene);
+            login.show();
+            login.setResizable(false);
+            login.setTitle("WheelzHub - Login");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -255,7 +270,7 @@ public class HomePageController implements Initializable {
                 String image = rs.getString("image1");
 
                 Car car = new Car(make, model, price, color, mileage, image);
-                System.out.println(car.getImage1());
+                System.out.println(car.getmake());
             }
 
             rs.close();
