@@ -72,6 +72,10 @@ public class LoginController implements Initializable {
         signUp.setScene(scene);
         signUp.show();
         signUp.setResizable(false);
+        signUp.setTitle("WheelzHub - Sign Up");
+        Image icon = new Image(getClass().getResourceAsStream("../img/car.png"));
+        signUp.getIcons().add(icon);
+
     }
 
     public void loginAction() throws SQLException, IOException {
@@ -102,6 +106,7 @@ public class LoginController implements Initializable {
                     administratorStage.show();
                     administratorStage.setMaximized(true);
                     administratorStage.setResizable(false);
+                    administratorStage.setTitle("WheelzHub - Admin Panel");
 
                 } else {
                     System.out.println("Username and password is not correct");
@@ -144,6 +149,7 @@ public class LoginController implements Initializable {
                     signUp.show();
                     signUp.setMaximized(true);
                     signUp.setResizable(false);
+                    signUp.setTitle("WheelzHub");
                 } else {
                     System.out.println("Username and password is not correct");
                     load.setVisible(false);

@@ -72,6 +72,7 @@ public class SignUpController implements Initializable {
     login.setScene(scene);
     login.show();
     login.setResizable(false);
+    login.setTitle("WheelzHub - Login");
   }
 
   @Override

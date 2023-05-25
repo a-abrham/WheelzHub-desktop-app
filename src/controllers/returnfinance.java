@@ -12,7 +12,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
 
-public class returnfinance implements Initializable{
+public class returnfinance implements Initializable {
 
     @FXML
     private JFXButton buttonToBack;
@@ -20,28 +20,49 @@ public class returnfinance implements Initializable{
     @FXML
     private JFXTextArea text;
 
+    private AnchorPane holder;
+
+    public void setHolder(AnchorPane holder) {
+        this.holder = holder;
+    }
+
+    // @FXML
+    // void back(ActionEvent event) {
+    // try {
+    // FXMLLoader loader = new
+    // FXMLLoader(getClass().getResource("/FXML/Finance.fxml"));
+    // AnchorPane financePane = loader.load();
+    // Finance financeController = loader.getController();
+    // financeController.setHolder(holder);
+    // financeController.setNode2(financePane);
+    // } catch (IOException e) {
+    // e.printStackTrace();
+    // }
+    // }
+
     @FXML
-    void BackTo(ActionEvent event) {
+    void back(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Financing.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Finance.fxml"));
             AnchorPane financePane = loader.load();
-            setNode2(financePane);
+            Finance financeController = loader.getController();
+            financeController.setHolder(holder);
+            financeController.setNode2(financePane);
+
+            // Set the loaded Finance.fxml as the new content in the holder
+            holder.getChildren().add(financePane);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        } 
-        private AnchorPane Holder;
-
-     public void getholder(AnchorPane holder) {
-        Holder= holder;
-}
-          private void setNode2(AnchorPane node) {
-            Holder.getChildren().clear();
-            Holder.getChildren().add(node);
     }
+
+    public void setNode2(AnchorPane node) {
+        holder.getChildren().clear();
+        holder.getChildren().add(node);
+    }
+
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         text.setStyle("-fx-text-fill: white;");
     }
-
 }

@@ -38,35 +38,38 @@ public class Finance implements Initializable {
     @FXML
     private JFXTextField phone;
 
+    private AnchorPane Holder;
+
+    public void setHolder(AnchorPane holder) {
+        Holder = holder;
+    }
+
     @FXML
     void BackTo(ActionEvent event) {
         if (Holder != null) {
             Holder.getChildren().clear();
-        }
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Finance.fxml"));
-            AnchorPane financePane = loader.load();
-            returnfinance financeController = loader.getController();
-            financeController.getholder(Holder);
-            setNode2(financePane);
-        } catch (IOException e) {
-            e.printStackTrace();
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Finance.fxml"));
+                AnchorPane returnFinancePane = loader.load();
+                returnfinance returnFinanceController = loader.getController();
+                returnFinanceController.setHolder(Holder);
+                returnFinanceController.setNode2(returnFinancePane);
+
+                // Set the loaded returnfinance.fxml as the new content in the Holder
+                Holder.getChildren().add(returnFinancePane);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
-    private void setNode2(AnchorPane node) {
+    void setNode2(AnchorPane node) {
         Holder.getChildren().clear();
         AnchorPane.setRightAnchor(node, 0.0);
         AnchorPane.setLeftAnchor(node, 0.0);
         AnchorPane.setTopAnchor(node, 0.0);
         AnchorPane.setBottomAnchor(node, 0.0);
         Holder.getChildren().add(node);
-    }
-
-    private AnchorPane Holder;
-
-    public void setHolder(AnchorPane holder) {
-        Holder = holder;
     }
 
     @Override
