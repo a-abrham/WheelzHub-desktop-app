@@ -17,6 +17,8 @@ public class App extends Application {
       primaryStage.setScene(scene);
       primaryStage.show();
       primaryStage.setResizable(false);
+      primaryStage.setTitle("WheelzHub - Login");
+
    }
 
    public static void main(String[] args) {
