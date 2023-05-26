@@ -15,22 +15,22 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.FileChooser;
 
-public class AddCars implements Initializable {
+public class a implements Initializable {
 
     @FXML
-    private JFXTextField City;
+    private JFXPasswordField City;
 
     @FXML
-    private JFXTextField Email;
+    private JFXPasswordField Email;
 
     @FXML
     private JFXPasswordField PhoneNumber;
 
     @FXML
-    private JFXTextField State;
+    private JFXPasswordField State;
 
     @FXML
-    private JFXTextField State1;
+    private JFXPasswordField State1;
 
     @FXML
     private JFXButton Submit;
@@ -67,13 +67,10 @@ public class AddCars implements Initializable {
 
         if (buttonId.equals("selectImageButton1")) {
             img1.setText(selectedImage.getName());
-            img1.setVisible(true);
         } else if (buttonId.equals("selectImageButton2")) {
             img2.setText(selectedImage.getName());
-            img2.setVisible(true);
         } else if (buttonId.equals("selectImageButton3")) {
             img3.setText(selectedImage.getName());
-            img3.setVisible(true);
         }
         // if (selectedImage != null) {
         // if (selected == 1) {

@@ -127,14 +127,14 @@ public class HomePageController implements Initializable {
         }
     }
 
-    private void setNode5(AnchorPane node1) {
-        Holder.getChildren().clear();
-        AnchorPane.setRightAnchor(node1, 0.0);
-        Holder.getChildren().add(node1);
-        AnchorPane.setTopAnchor(node1, 0.0);
-        AnchorPane.setBottomAnchor(node1, 0.0);
-        AnchorPane.setLeftAnchor(node1, 0.0);
-    }
+    // private void setNode5(AnchorPane node1) {
+    // Holder.getChildren().clear();
+    // AnchorPane.setRightAnchor(node1, 0.0);
+    // Holder.getChildren().add(node1);
+    // AnchorPane.setTopAnchor(node1, 0.0);
+    // AnchorPane.setBottomAnchor(node1, 0.0);
+    // AnchorPane.setLeftAnchor(node1, 0.0);
+    // }
 
     @FXML
     void Home(ActionEvent event) {
