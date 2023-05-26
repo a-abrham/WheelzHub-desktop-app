@@ -10,73 +10,73 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="685.0" prefWidth="908.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Reservation">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="685.0" prefWidth="908.0" style="-fx-background-color: #9098a3;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Reservation">
    <children>
-      <JFXTextField id="companyName" fx:id="companyName" focusColor="#6f86c7" layoutX="370.0" layoutY="140.0" prefHeight="26.0" prefWidth="230.0" promptText="Company Name" style="-fx-text-inner-color: #a0a2ab;" unFocusColor="#999999">
+      <JFXTextField id="companyName" fx:id="companyName" focusColor="#6f86c7" layoutX="445.0" layoutY="146.0" prefHeight="26.0" prefWidth="230.0" promptText="Company Name" style="-fx-text-inner-color: #1a4566;" unFocusColor="#b4b4b4">
          <font>
             <Font size="14.0" />
          </font>
       </JFXTextField>
-      <JFXPasswordField id="Email" fx:id="Email" layoutX="370.0" layoutY="193.0" prefHeight="26.0" prefWidth="230.0" promptText="Email" style="-fx-text-inner-color: #a0a2ab;" unFocusColor="#b4b4b4">
+      <JFXPasswordField id="Email" fx:id="Email" layoutX="445.0" layoutY="199.0" prefHeight="26.0" prefWidth="230.0" promptText="Email" style="-fx-text-inner-color: #1a4566;" unFocusColor="#b4b4b4">
          <font>
             <Font size="14.0" />
          </font>
       </JFXPasswordField>
-      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="307.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="382.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@CompanyName.PNG" />
          </image></ImageView>
-      <ImageView fitHeight="32.0" fitWidth="28.0" layoutX="307.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="382.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Email.PNG" />
          </image></ImageView>
-      <Label layoutX="366.0" layoutY="62.0" prefHeight="32.0" prefWidth="176.0" text="Reservation Form" textFill="#2196f3">
+      <Label layoutX="436.0" layoutY="81.0" prefHeight="32.0" prefWidth="185.0" text="Reservation Form" textFill="#1a4566">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="22.0" />
          </font>
       </Label>
-      <ImageView fitHeight="42.0" fitWidth="51.0" layoutX="434.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="42.0" fitWidth="51.0" layoutX="509.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@i.jpg" />
          </image>
       </ImageView>
-      <JFXPasswordField id="PhoneNumber" fx:id="PhoneNumber" layoutX="370.0" layoutY="239.0" prefHeight="26.0" prefWidth="230.0" promptText="Phone Number" style="-fx-text-inner-color: #a0a2ab;" unFocusColor="#b4b4b4">
+      <JFXPasswordField id="PhoneNumber" fx:id="PhoneNumber" layoutX="445.0" layoutY="245.0" prefHeight="26.0" prefWidth="230.0" promptText="Phone Number" style="-fx-text-inner-color: #1a4566;" unFocusColor="#b4b4b4">
          <font>
             <Font size="14.0" />
          </font>
       </JFXPasswordField>
-      <JFXPasswordField id="City" fx:id="City" layoutX="370.0" layoutY="287.0" prefHeight="26.0" prefWidth="230.0" promptText="City" style="-fx-text-inner-color: #a0a2ab;" unFocusColor="#b4b4b4">
+      <JFXPasswordField id="City" fx:id="City" layoutX="445.0" layoutY="293.0" prefHeight="26.0" prefWidth="230.0" promptText="City" style="-fx-text-inner-color: #1a4566;" unFocusColor="#b4b4b4">
          <font>
             <Font size="14.0" />
          </font>
       </JFXPasswordField>
-      <JFXPasswordField id="State" fx:id="State" layoutX="370.0" layoutY="335.0" prefHeight="26.0" prefWidth="230.0" promptText="State" style="-fx-text-inner-color: #a0a2ab;" unFocusColor="#b4b4b4">
+      <JFXPasswordField id="State" fx:id="State" layoutX="445.0" layoutY="341.0" prefHeight="26.0" prefWidth="230.0" promptText="State" style="-fx-text-inner-color: #1a4566;" unFocusColor="#b4b4b4">
          <font>
             <Font size="14.0" />
          </font>
       </JFXPasswordField>
-      <JFXTextArea id="Comment" fx:id="Comment" layoutX="370.0" layoutY="378.0" prefHeight="122.0" prefWidth="230.0" promptText="Comment" />
-      <JFXButton id="Submit" fx:id="Submit" layoutX="400.0" layoutY="527.0" onAction="#Finance" prefHeight="30.0" prefWidth="107.0" style="-fx-background-color: #2196f3;" text="Submit" textFill="#c7c5c5" />
-      <ImageView fitHeight="24.0" fitWidth="28.0" layoutX="311.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true">
+      <JFXTextArea id="Comment" fx:id="Comment" layoutX="445.0" layoutY="384.0" prefHeight="122.0" prefWidth="230.0" promptText="Comment" unFocusColor="#b4b4b4" />
+      <JFXButton id="Submit" fx:id="Submit" layoutX="475.0" layoutY="533.0" onAction="#Finance" prefHeight="30.0" prefWidth="107.0" style="-fx-background-color: #2196f3;" text="Submit" textFill="#c7c5c5" />
+      <ImageView fitHeight="24.0" fitWidth="28.0" layoutX="386.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Phone.PNG" />
          </image>
       </ImageView>
-      <ImageView fitHeight="24.0" fitWidth="28.0" layoutX="309.0" layoutY="290.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="384.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@City.PNG" />
          </image>
       </ImageView>
-      <ImageView fitHeight="24.0" fitWidth="28.0" layoutX="310.0" layoutY="337.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="385.0" layoutY="343.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@State.PNG" />
          </image>
       </ImageView>
-      <ImageView fitHeight="24.0" fitWidth="22.0" layoutX="310.0" layoutY="378.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="385.0" layoutY="384.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@messge.PNG" />
          </image>
       </ImageView>
-      <Label layoutX="411.0" layoutY="589.0" text="sucess msg/ not" textFill="#b77979" />
+      <Label layoutX="486.0" layoutY="595.0" text="sucess msg/ not" textFill="#b77979" />
    </children>
 </AnchorPane>
