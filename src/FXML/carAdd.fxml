@@ -12,12 +12,12 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="685.0" prefWidth="908.0" style="-fx-background-color: #9098a3;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddCars">
    <children>
-      <JFXTextField fx:id="companyName" focusColor="#6f86c7" layoutX="445.0" layoutY="146.0" prefHeight="26.0" prefWidth="230.0" promptText="Model" style="-fx-text-inner-color: #1a4566;" unFocusColor="#b4b4b4">
+      <JFXTextField fx:id="modelField" focusColor="#6f86c7" layoutX="445.0" layoutY="146.0" prefHeight="26.0" prefWidth="230.0" promptText="Model" style="-fx-text-inner-color: #1a4566;" unFocusColor="#b4b4b4">
          <font>
             <Font size="14.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="Email" layoutX="445.0" layoutY="199.0" prefHeight="26.0" prefWidth="230.0" promptText="Manufacturer" style="-fx-text-inner-color: #1a4566;" unFocusColor="#b4b4b4">
+      <JFXTextField fx:id="makeField" layoutX="445.0" layoutY="199.0" prefHeight="26.0" prefWidth="230.0" promptText="Manufacturer" style="-fx-text-inner-color: #1a4566;" unFocusColor="#b4b4b4">
          <font>
             <Font size="14.0" />
          </font>
@@ -40,22 +40,22 @@
             <Image url="@i.jpg" />
          </image>
       </ImageView>
-      <JFXPasswordField fx:id="PhoneNumber" layoutX="445.0" layoutY="245.0" prefHeight="26.0" prefWidth="230.0" promptText="Categories" style="-fx-text-inner-color: #1a4566;" unFocusColor="#b4b4b4">
+      <JFXPasswordField fx:id="yearField" layoutX="445.0" layoutY="245.0" prefHeight="26.0" prefWidth="230.0" promptText="Year" style="-fx-text-inner-color: #1a4566;" unFocusColor="#b4b4b4">
          <font>
             <Font size="14.0" />
          </font>
       </JFXPasswordField>
-      <JFXTextField fx:id="City" layoutX="445.0" layoutY="293.0" prefHeight="26.0" prefWidth="230.0" promptText="Price" style="-fx-text-inner-color: #1a4566;" unFocusColor="#b4b4b4">
+      <JFXTextField fx:id="priceField" layoutX="445.0" layoutY="293.0" prefHeight="26.0" prefWidth="230.0" promptText="Price" style="-fx-text-inner-color: #1a4566;" unFocusColor="#b4b4b4">
          <font>
             <Font size="14.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="State" layoutX="445.0" layoutY="341.0" prefHeight="26.0" prefWidth="230.0" promptText="Fule Type" style="-fx-text-inner-color: #1a4566;" unFocusColor="#b4b4b4">
+      <JFXTextField fx:id="fule" layoutX="445.0" layoutY="341.0" prefHeight="26.0" prefWidth="230.0" promptText="Fule Type" style="-fx-text-inner-color: #1a4566;" unFocusColor="#b4b4b4">
          <font>
             <Font size="14.0" />
          </font>
       </JFXTextField>
-      <JFXButton fx:id="Submit" layoutX="487.0" layoutY="613.0" onAction="#Finance" prefHeight="30.0" prefWidth="107.0" style="-fx-background-color: #2196f3;" text="Submit" textFill="#c7c5c5" />
+      <JFXButton fx:id="Submit" layoutX="474.0" layoutY="588.0" onAction="#submitCarForm" prefHeight="30.0" prefWidth="107.0" style="-fx-background-color: #2196f3;" text="Submit" textFill="#c7c5c5" />
       <ImageView fitHeight="24.0" fitWidth="28.0" layoutX="386.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Phone.PNG" />
@@ -71,8 +71,11 @@
             <Image url="@State.PNG" />
          </image>
       </ImageView>
-      <Label layoutX="486.0" layoutY="595.0" text="sucess msg/ not" textFill="#b77979" />
-      <JFXTextField fx:id="State1" layoutX="445.0" layoutY="389.0" prefHeight="26.0" prefWidth="230.0" promptText="Transmission" style="-fx-text-inner-color: #1a4566;" unFocusColor="#b4b4b4">
+      <Label fx:id="sucMssg" layoutX="442.0" layoutY="640.0" text="Sucessfully added!" textFill="#3dcc3a">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <JFXTextField fx:id="transmission" layoutX="445.0" layoutY="389.0" prefHeight="26.0" prefWidth="230.0" promptText="Transmission" style="-fx-text-inner-color: #1a4566;" unFocusColor="#b4b4b4">
          <font>
             <Font size="14.0" />
          </font>
@@ -115,5 +118,10 @@
                 <Font name="System Bold" size="14.0" />
             </font>
         </Label>
+      <Label fx:id="errMssg" layoutX="450.0" layoutY="640.0" text="Fix your inputs." textFill="#dc2424">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
