@@ -11,11 +11,11 @@ public class App extends Application {
    public void start(Stage primaryStage) throws IOException {
       Image icon = new Image(getClass().getResourceAsStream("img/car.png"));
       primaryStage.getIcons().add(icon);
-      Parent root = FXMLLoader.load(getClass().getResource("/FXML/Login.fxml"));
+      Parent root = FXMLLoader.load(getClass().getResource("/FXML/login.fxml"));
       Scene scene = new Scene(root, 600, 400);
       primaryStage.setScene(scene);
       primaryStage.show();
-      primaryStage.setResizable(false);
+      primaryStage.setResizable(true);
       primaryStage.setTitle("WheelzHub - Login");
 
    }
