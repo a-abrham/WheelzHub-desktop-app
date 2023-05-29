@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
 <?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="685.0" prefWidth="908.0" style="-fx-background-color: #9098a3;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddCars">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="789.0" prefWidth="1006.0" style="-fx-background-color: #9098a3;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddCars">
    <children>
       <JFXTextField fx:id="modelField" focusColor="#6f86c7" layoutX="445.0" layoutY="146.0" prefHeight="26.0" prefWidth="230.0" promptText="Model" style="-fx-text-inner-color: #1a4566;" unFocusColor="#b4b4b4">
          <font>
@@ -22,13 +25,13 @@
             <Font size="14.0" />
          </font>
       </JFXTextField>
-      <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="382.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="42.0" fitWidth="32.0" layoutX="382.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@CompanyName.PNG" />
+            <Image url="@model.png" />
          </image></ImageView>
-      <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="382.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="384.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Email.PNG" />
+            <Image url="@made.png" />
          </image></ImageView>
       <Label layoutX="455.0" layoutY="83.0" prefHeight="32.0" prefWidth="146.0" text="Add new CAR" textFill="#1a4566">
          <font>
@@ -55,23 +58,23 @@
             <Font size="14.0" />
          </font>
       </JFXTextField>
-      <JFXButton fx:id="Submit" layoutX="474.0" layoutY="588.0" onAction="#submitCarForm" prefHeight="30.0" prefWidth="107.0" style="-fx-background-color: #2196f3;" text="Submit" textFill="#c7c5c5" />
+      <JFXButton fx:id="Submit" layoutX="473.0" layoutY="672.0" onAction="#submitCarForm" prefHeight="30.0" prefWidth="107.0" style="-fx-background-color: #2196f3;" text="Submit" textFill="#c7c5c5" />
       <ImageView fitHeight="24.0" fitWidth="28.0" layoutX="386.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Phone.PNG" />
+            <Image url="@year.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="384.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@City.PNG" />
+            <Image url="@price.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="385.0" layoutY="343.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@State.PNG" />
+            <Image url="@fuel.png" />
          </image>
       </ImageView>
-      <Label fx:id="sucMssg" layoutX="442.0" layoutY="640.0" text="Sucessfully added!" textFill="#3dcc3a">
+      <Label fx:id="sucMssg" layoutX="440.0" layoutY="703.0" text="Sucessfully added!" textFill="#3dcc3a">
          <font>
             <Font name="System Bold" size="20.0" />
          </font></Label>
@@ -82,12 +85,12 @@
       </JFXTextField>
       <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="386.0" layoutY="392.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@State.PNG" />
+            <Image url="@transmission.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="384.0" layoutY="437.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@State.PNG" />
+            <Image url="@add-image.png" />
          </image>
       </ImageView>
       <Button fx:id="selectImageButton1" layoutX="445.0" layoutY="478.0" mnemonicParsing="false" onAction="#selectImage" prefHeight="26.0" prefWidth="93.0" text="Select Image 2" />
@@ -98,7 +101,7 @@
         </Label>
       <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="384.0" layoutY="477.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@State.PNG" />
+            <Image url="@add-image.png" />
          </image>
       </ImageView>
       <Button fx:id="selectImageButton2" layoutX="445.0" layoutY="438.0" mnemonicParsing="false" onAction="#selectImage" prefHeight="26.0" prefWidth="94.0" text="Select Image 1" />
@@ -107,9 +110,9 @@
                 <Font name="System Bold" size="14.0" />
             </font>
         </Label>
-      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="382.0" layoutY="520.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="386.0" layoutY="522.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@State.PNG" />
+            <Image url="@add-image.png" />
          </image>
       </ImageView>
       <Button fx:id="selectImageButton3" layoutX="443.0" layoutY="521.0" mnemonicParsing="false" onAction="#selectImage" prefHeight="26.0" prefWidth="94.0" text="Select Image 3" />
@@ -118,10 +121,28 @@
                 <Font name="System Bold" size="14.0" />
             </font>
         </Label>
-      <Label fx:id="errMssg" layoutX="450.0" layoutY="640.0" text="Fix your inputs." textFill="#dc2424">
+      <Label fx:id="errMssg" layoutX="454.0" layoutY="733.0" text="Fix your inputs." textFill="#dc2424">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="386.0" layoutY="568.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@add-image.png" />
+         </image>
+      </ImageView>
+      <JFXCheckBox layoutX="457.0" layoutY="621.0" text="Add it to Featured cars" />
+      <MenuButton fx:id="carCategoryMenuButton" accessibleRole="MENU_ITEM" layoutX="443.0" layoutY="564.0" mnemonicParsing="false" onAction="#category" prefHeight="24.0" prefWidth="210.0" text="Car category">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Casual" />
+          <MenuItem mnemonicParsing="false" text="Wedding" />
+            <MenuItem mnemonicParsing="false" text="Construction" />
+            <MenuItem mnemonicParsing="false" text="Tour" />
+            <MenuItem mnemonicParsing="false" text="Funneral" />
+        </items>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </MenuButton>
    </children>
 </AnchorPane>

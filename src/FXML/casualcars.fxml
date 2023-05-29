@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Holder" maxHeight="939.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="100.0" prefHeight="891.0" prefWidth="1207.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.fetchcontent">
+   <children>
+      <AnchorPane fx:id="toplist" layoutX="76.0" layoutY="83.0" prefHeight="279.0" prefWidth="983.0" />
+      <AnchorPane fx:id="holder" layoutX="10.0" layoutY="385.0" minWidth="728.0" prefHeight="526.0" prefWidth="1258.0">
+         <children>
+            <JFXButton layoutX="629.0" layoutY="238.0" onAction="#toHomepage" text="go back to catagory" />
+         </children></AnchorPane>
+      <JFXButton fx:id="forward" layoutX="24.0" layoutY="197.0" onAction="#forward" prefHeight="51.0" prefWidth="50.0" text=" ">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@next.PNG" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="next" contentDisplay="TOP" layoutX="1166.0" layoutY="190.0" onAction="#next" prefHeight="59.0" prefWidth="72.0" text=" ">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="40.0" fitWidth="45.0" layoutX="1136.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@next.PNG" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

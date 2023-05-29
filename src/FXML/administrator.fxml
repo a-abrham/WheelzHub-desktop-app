@@ -40,9 +40,11 @@
                </font>
             </Label>
             <Line endX="100.59999084472656" endY="7.62939453125E-6" layoutX="101.0" layoutY="104.0" startX="-100.0" />
+            <Line endX="100.0" layoutX="12.0" layoutY="417.0" startX="-10.000012397766113" />
+            <JFXButton layoutX="13.0" layoutY="434.0" onAction="#logout" prefHeight="35.0" prefWidth="89.0" style="-fx-border-color: #fff; -fx-background-color: #101356;" text="Log Out" textFill="WHITE" />
          </children>
       </Pane>
-      <AnchorPane id="Container" fx:id="Container" layoutX="423.0" layoutY="49.0" onDragDetected="#Contain" prefHeight="241.0" prefWidth="290.0" style="-fx-background-color: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;?import com.jfoenix.controls.JFXButton?&gt;&lt;?import javafx.scene.text.Font?&gt;&lt;JFXButton fx:id=&quot;Contact&quot; layoutX=&quot;26.0&quot; layoutY=&quot;134.0&quot; onAction=&quot;#Contact&quot; style=&quot;-fx-background-color: #1b125e;&quot; text=&quot;Create Contact to User&quot; textFill=&quot;#c1c9d9&quot; xmlns=&quot;http://javafx.com/javafx/19&quot; xmlns:fx=&quot;http://javafx.com/fxml/1&quot;&gt;   &lt;font&gt;      &lt;Font size=&quot;16.0&quot; /&gt;   &lt;/font&gt;&lt;/JFXButton&gt;;">
+      <AnchorPane id="Container" fx:id="Container" layoutX="423.0" layoutY="49.0" onDragDetected="#Contain" prefHeight="242.0" prefWidth="424.0" style="-fx-background-color: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;?import com.jfoenix.controls.JFXButton?&gt;&lt;?import javafx.scene.text.Font?&gt;&lt;JFXButton fx:id=&quot;Contact&quot; layoutX=&quot;26.0&quot; layoutY=&quot;134.0&quot; onAction=&quot;#Contact&quot; style=&quot;-fx-background-color: #1b125e;&quot; text=&quot;Create Contact to User&quot; textFill=&quot;#c1c9d9&quot; xmlns=&quot;http://javafx.com/javafx/19&quot; xmlns:fx=&quot;http://javafx.com/fxml/1&quot;&gt;   &lt;font&gt;      &lt;Font size=&quot;16.0&quot; /&gt;   &lt;/font&gt;&lt;/JFXButton&gt;;">
          <children>
             <Text fill="#bbf1f4" layoutX="55.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This Page is Only granted to Admistors  So please Keep Password Confidentail. " wrappingWidth="294.93675231933594" />
          </children>
