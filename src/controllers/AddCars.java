@@ -17,6 +17,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuButton;
 import javafx.stage.FileChooser;
 
 public class AddCars implements Initializable {
@@ -25,16 +26,13 @@ public class AddCars implements Initializable {
     private JFXButton Submit;
 
     @FXML
+    private Label errMssg;
+
+    @FXML
     private JFXTextField fule;
 
     @FXML
     private Label img1;
-
-    @FXML
-    private Label errMssg;
-
-    @FXML
-    private Label sucMssg;
 
     @FXML
     private Label img2;
@@ -61,10 +59,24 @@ public class AddCars implements Initializable {
     private Button selectImageButton3;
 
     @FXML
+    private Label sucMssg;
+
+    @FXML
     private JFXTextField transmission;
 
     @FXML
     private JFXPasswordField yearField;
+
+    @FXML
+    private MenuButton carCategoryMenuButton;
+
+    @FXML
+    private void category(ActionEvent event) {
+        MenuButton clickedItem = (MenuButton) event.getSource();
+        String clickedItemText = clickedItem.getText();
+        carCategoryMenuButton.setText(clickedItemText);
+        System.out.println(clickedItemText);
+    }
 
     private File selectedImage1;
     private File selectedImage2;
