@@ -43,11 +43,11 @@
             <Image url="@i.jpg" />
          </image>
       </ImageView>
-      <JFXPasswordField fx:id="yearField" layoutX="445.0" layoutY="245.0" prefHeight="26.0" prefWidth="230.0" promptText="Year" style="-fx-text-inner-color: #1a4566;" unFocusColor="#b4b4b4">
+      <JFXTextField fx:id="yearField" layoutX="445.0" layoutY="245.0" prefHeight="26.0" prefWidth="230.0" promptText="Year" style="-fx-text-inner-color: #1a4566;" unFocusColor="#b4b4b4">
          <font>
             <Font size="14.0" />
          </font>
-      </JFXPasswordField>
+      </JFXTextField>
       <JFXTextField fx:id="priceField" layoutX="445.0" layoutY="293.0" prefHeight="26.0" prefWidth="230.0" promptText="Price" style="-fx-text-inner-color: #1a4566;" unFocusColor="#b4b4b4">
          <font>
             <Font size="14.0" />
