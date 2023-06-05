@@ -8,7 +8,6 @@ import java.sql.PreparedStatement;
 import java.util.ResourceBundle;
 
 import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 
 import DBconnection.DBhandler;
@@ -65,7 +64,7 @@ public class AddCars implements Initializable {
     private JFXTextField transmission;
 
     @FXML
-    private JFXPasswordField yearField;
+    private JFXTextField yearField;
 
     @FXML
     private MenuButton carCategoryMenuButton;
@@ -133,22 +132,25 @@ public class AddCars implements Initializable {
         } catch (NumberFormatException e) {
             sucMssg.setVisible(false);
             errMssg.setVisible(true);
+            e.printStackTrace();
+
             return; // Exit the method if the year is not a valid number
         }
 
         try {
             price = Double.parseDouble(priceField.getText());
         } catch (NumberFormatException e) {
-            errMssg.setVisible(true);
+            e.printStackTrace();
             return; // Exit the method if the price is not a valid number
         }
 
-        // Check if any input fields are empty
-        if (make.isEmpty() || model.isEmpty() || yearField.getText().isEmpty() || priceField.getText().isEmpty()) {
-            sucMssg.setVisible(false);
-            errMssg.setVisible(true);
-            return; // Exit the method if any input field is empty
-        }
+        // // Check if any input fields are empty
+        // if (make.isEmpty() || model.isEmpty() || yearField.getText().isEmpty() ||
+        // priceField.getText().isEmpty()) {
+        // sucMssg.setVisible(false);
+        // errMssg.setVisible(true);
+        // return; // Exit the method if any input field is empty
+        // }
 
         // Code to insert the car details and image into the database
         try {
@@ -186,6 +188,7 @@ public class AddCars implements Initializable {
             sucMssg.setText("Car inserted successfully");
         } catch (Exception e) {
             errMssg.setVisible(true);
+            e.printStackTrace();
         }
 
         // Use the selectedImage file for further processing

@@ -7,11 +7,11 @@ public class Car {
     private String color;
     private String mileage;
     private String year;
-    private String image;
+    private byte[] image;
     private String image1;
     private String image2;
 
-    public Car(String make, String model, String price, String color, String mileage, String image) {
+    public Car(String make, String model, String price, String color, String mileage, byte[] image) {
         this.make = make;
         this.model = model;
         this.price = price;
@@ -40,7 +40,7 @@ public class Car {
         return mileage;
     }
 
-    public String getimage() {
+    public byte[] getimage() {
         return image;
     }
 

@@ -1,13 +1,15 @@
 package controllers;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXToolbar;
@@ -16,13 +18,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.Parent;
-import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 
@@ -80,57 +82,52 @@ public class fetchcontent implements Initializable {
             ResultSet rs = pst.executeQuery();
 
             Double x = 30.0; // Initial position for the Label
-            double labelY = 30.0;
             double labelX = 50.0;
-            List<Label> yearLabels = new ArrayList<>();
-            List<Label> makeLabels = new ArrayList<>();
-            List<Label> modelLabels = new ArrayList<>();
-            List<Label> colorLabels = new ArrayList<>();
-            List<Label> mileeagLabels = new ArrayList<>();
             while (rs.next()) {
-                labelY = 30.0;
                 String make = rs.getString("make");
                 String model = rs.getString("model");
                 String year = rs.getString("year");
-                Car car = new Car(make, model, year, make, make, make);
+                byte[] imageData = rs.getBytes("image1");
+                Car car = new Car(make, model, year, make, make, imageData);
 
-                Label yearLabel = new Label(car.getYear());
-                Label makeLabel = new Label(car.getmake());
-                Label modelLabel = new Label(car.getmodel());
-                Label colorLabel = new Label(car.getcolor());
-                Label mileagLabel = new Label(car.getmileage());
-                yearLabels.add(yearLabel);
-                makeLabels.add(makeLabel);
-                modelLabels.add(modelLabel);
-                colorLabels.add(colorLabel);
-                mileeagLabels.add(mileagLabel);
+                VBox vbox = new VBox();
+                vbox.setLayoutX(labelX);
+                vbox.setBackground(new Background(new BackgroundFill(Color.GRAY, null, null)));
+                vbox.setSpacing(10);
 
-                Pane pane = new Pane();
-                pane.setLayoutX(labelX);
-                pane.setBackground(new Background(new BackgroundFill(Color.GRAY, null,
-                        null)));
-                pane.getChildren().addAll(yearLabel, makeLabel, modelLabel, colorLabel,
-                        mileagLabel);
-                pane.setPrefWidth(250);
+                vbox.setAlignment(Pos.TOP_CENTER);
 
-                makeLabel.setLayoutY(labelY);
-                labelY = labelY + 50;
-                modelLabel.setLayoutY(labelY);
-                labelY = labelY + 50;
-                colorLabel.setLayoutY(labelY);
-                labelY = labelY + 50;
-                mileagLabel.setLayoutY(labelY);
-                labelY = labelY + 50;
-                yearLabel.setLayoutY(labelY);
-                labelY = labelY + 50;
-                mileagLabel.setLayoutY(labelY);
-                labelY = labelY + 50;
-                AnchorPane.setTopAnchor(yearLabel, 50.0);
-                AnchorPane.setLeftAnchor(yearLabel, 50.0);
+                ImageView imageView = new ImageView();
+                imageView.setFitWidth(200);
+                imageView.setFitHeight(200);
+                if (car.getimage() != null) {
+                    ByteArrayInputStream imageStream = new ByteArrayInputStream(car.getimage());
+                    Image image = new Image(imageStream);
+                    imageView.setImage(image);
+                }
 
-                toplist.getChildren().add(pane);
-                AnchorPane.setLeftAnchor(pane, x);
+                Label makeLabel = new Label("Make: " + car.getmake());
+                makeLabel.setMinHeight(30);
+                Label modelLabel = new Label("Model: " + car.getmodel());
+                modelLabel.setMinHeight(30);
+                Label colorLabel = new Label("Color: " + car.getcolor());
+                colorLabel.setMinHeight(30);
+                Label yearLabel = new Label("Year: " + car.getYear());
+                yearLabel.setMinHeight(30);
+
+                vbox.getChildren().addAll(imageView, makeLabel, modelLabel, colorLabel, yearLabel);
+                vbox.setPrefWidth(250);
+
+                makeLabel.setAlignment(Pos.CENTER);
+                modelLabel.setAlignment(Pos.CENTER);
+                colorLabel.setAlignment(Pos.CENTER);
+                yearLabel.setAlignment(Pos.CENTER);
+
+                AnchorPane.setTopAnchor(vbox, 50.0);
+                toplist.getChildren().add(vbox);
+                AnchorPane.setLeftAnchor(vbox, x);
                 x += 275;
+
             }
             rs.close();
         } catch (SQLException e) {
